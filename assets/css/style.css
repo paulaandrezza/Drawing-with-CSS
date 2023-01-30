@@ -26,18 +26,15 @@ body {
     overflow-x:hidden
 }
 
-header, footer, aside {
+header, aside {
     position: fixed;
     z-index: 100;
     background-color: #202020;
 }
 
-header, footer {
+header {
     width: 100vw;
     height: 10%;
-}
-
-header {
     top:0;
     left:0;
     top: 0px;
@@ -65,12 +62,13 @@ aside {
     left: 0;
     top: 10%;
     width: 5%;
-    height: 80%;
+    height: 90%;
     color: white;
-
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
+    gap: 250px;
 }
 
 aside section ul {
@@ -80,13 +78,12 @@ aside section ul {
 }
 
 main {
-    position: relative;
     margin: 10% 5%;
 }
 
 main section {
     margin: 100px;
-    min-height: 80vh;
+    min-height: 90vh;
 }
 
 #s-home {
@@ -112,6 +109,24 @@ main section {
 
 #s-about h2{
     margin: 50px 0;
+}
+
+#s-portfolio ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#s-portfolio ul li {
+    flex-basis: 30%;
+}
+
+#s-portfolio ul li, #s-portfolio ul li a img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
 }
 
 #s-contact {
